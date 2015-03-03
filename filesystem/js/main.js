@@ -23,7 +23,7 @@ function handleInitSuccess(fileSystem) {
 }
 
 function createFile(fullPath){
-  fileSystem.root.getFile(fullPath, {create: true, /*exclusive: true*/},
+  fileSystem.root.getFile(fullPath, {create: true /*exclusive: true*/},
     function(fileEntry) {
       log('Created file: ' + fileEntry.fullPath);
       writeToFile(fileEntry, 'Greetings from success callback!');
